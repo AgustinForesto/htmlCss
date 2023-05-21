@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!-- Especifica el tipo de documento y define que está bajo el estándar de HTML5. -->
+
+<html lang="en">
+  <!-- La etiqueta html representa el nodo principal del documento. El atributo lang nos indica el idioma en el que el contenido del documento estará escrito.  -->
+
+  <head>
+    <!-- En la cabeza, vamos a tener etiquetas que establecen ciertas configuraciones al documento, como el idioma, el juego de carcactéres, el viewport, favicon, hojas de estilos, etc. Adicionalmente definimos la meta información del documento, estos meta datos les sirven a los algoritmos de internet para dar información del contenido del documento a los motores de búsqueda como el título y la meta descripción.  -->
+
+    <meta charset="UTF-8" />
+    <!-- El charset define el juego de caracteres que usará el documento, UTF-8 es la codificación universal para soportar caracteres ajenos al inglés.  -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- La meta etiqueta viewport define como se visualizará el contenido en cualquier dispositivo, sea móvil, tableta, computadora de escritorio. Esta etiqueta es fundamental cuando hacemos diseño responsivo.  -->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Trata a este documento para internet explorer igualarlo a la configuracion de edge. No sirve, ya que explorer esta practicamente muerto. Se puede obviar esta etiqueta. -->
+
+    <title>HTML y CSS</title>
+    <!-- La etiqueta title representa el título de nuestro documento, éste se ve en la pestaña del navegador, también es el texto que se ve en los resultados de motores de búsqueda, el título no debe exceder los 65 carácteres.  -->
+
+    <meta name="description" content="Descripción del documento." />
+    <!-- La meta etiqueta description, es una breve descripción del contenido que se encontrará en el documento, también aparece en los resultados de los motores de búsqueda, debajo del enlace del resultado, no debe exceder los 165 caracteres.  -->
+
+    <link rel="icon" href="img/favicon.png" />
+    <!-- Un favicon es la imagen que se ve al lado del título de nuestro HTML en la pestaña del navegador, tiene que ser una imagen de dimensiones cuadradas y en formato .png  -->
+
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Esta etiqueta link nos permite enlazar la hoja de estilos CSS al documento HTML.  -->
+  </head>
+
+  <body>
+    <!-- En el cuerpo, irá todo el contenido textual y multimedia que queremos mostrar en el documento (todo lo que el usuario verá en el navegador).  -->
+
+    <h1>Encabezado 1</h1>
+    <!-- Se utilizan para definir encabezados (títulos) de texto. El número indica la jerarquía, siendo h1 el título principal y h6 el de menor importancia.  Se recomienda que sólo exista un título principal por documento como una buena práctica de SEO (Search Engine Optimization).  -->
+
+    <h2>Encabezado 2 Etiquetas de texto</h2>
+
+    <p>
+      Esto es un parrafo.<br>
+      <b>Esto es un pedazo de texto en negrita.</b><br>
+      <i>Texto en italicas.</i><br>
+      <u>Esto es texto subrayado.</u><br>
+      <mark>Texto remarcado.</mark><br>
+      <small>Definte texto en letras pequeñas.</small><br>
+      <sub>Esto es un subindice.</sub><br>
+      <sup>Esto es un superindice.</sup><br>
+      <blockquote>Esto es una cita textual.</blockquote><br>
+      <cite>Esto es la referencia de una cita textual.</cite><br>
+      <span>Esto es un bloque de texto en linea, no tiene carga semantica, span.</span><br>
+      Aca vemos la etiqueta br <br> para un salto de linea.<br>
+      Aca vemos la etiqueta hr <hr> que define un salto semantico de contenido <hr> dibuja una linea horizontal.<br>
+    </p>
+
+    <h3>Encabezado 3 Listas ordenadas y no ordenadas</h3>
+    <!-- En HTML principalmente tenemos 2 tipos de listas:
+      Ordenadas ( ol - order list ): Los elementos están numerados.
+      Desordenadas ( ul- unorder list ): Los elementos están listados con viñetas.
+    Los elementos de ambas listas se llaman list items ( li ).
+    El atributo type permita cambiar la numeración o el estilo de la viñeta del list item.
+    El atributo reversed permite invertir el orden de los elementos de una lista ordenada.
+    El atributo start permite cambiar el valor inicial de los elementos de una lista ordenada.  -->
+
+    <ol>
+      <li>Primavera</li>
+      <li>Verano</li>
+      <li>Otoño</li>
+      <li>Invierno</li>
+    </ol>
+
+    <ol type="i">
+      <li>Primavera</li>
+      <li>Verano</li>
+      <li>Otoño</li>
+      <li>Invierno</li>
+    </ol>
+    
+    <ol reversed>
+      <li>Primavera</li>
+      <li>Verano</li>
+      <li>Otoño</li>
+      <li>Invierno</li>
+    </ol>
+    
+    <ol start="100">
+      <li>Primavera</li>
+      <li>Verano</li>
+      <li>Otoño</li>
+      <li>Invierno</li>
+    </ol>
+    
+    <ul>
+      <li>Primavera</li>
+      <li>Verano</li>
+      <li>Otoño</li>
+      <li>Invierno</li>
+    </ul>
+    
+    <ul type="circle">
+      <li>Primavera</li>
+      <li>Verano</li>
+      <li>Otoño</li>
+      <li>Invierno</li>
+    </ul>
+
+    <ul type="square">
+      <li>Primavera</li>
+      <li>Verano</li>
+      <li>Otoño</li>
+      <li>Invierno</li>
+    </ul>
+
+    <h4>Encabezado 4 Tablas</h4>
+
+     <!-- Las tablas nos permiten tabular datos, las etiquetas para dibujar una tabla son:
+      table: Define la tabla en sí misma.
+      tr: Define la filas ( table row ) de la tabla.
+      td: Define las celdas ( table data ) dentro de las filas, lo que a su vez formará las
+      th: Define las celdas de cabecera ( table header ) dentro de la primer fila de la tabla, suele ser la fila de títulos de nuestra tabla. 
+    -->
+
+    <table border="1">
+      <tr>
+        <th>Ciudad</th>
+        <th>País</th>
+        <th>Continente</th>
+      </tr>
+      <tr>
+        <th>Ciudad de México</th>
+        <td>México</td>
+        <td>América</td>
+      </tr>
+      <tr>
+        <td>Tokyo</td>
+        <td>Japón</td>
+        <td>Asia</td>
+      </tr>
+      <tr>
+        <td>Reikiavik</td>
+        <td>Islandia</td>
+        <td>Europa</td>
+      </tr>
+    </table>
+
+    <h5>Encabezado 5 Enlaces</h5>
+    <!-- Nos permiten enlazar documentos HTML entre sí, secciónes internas del propio documento o vincular hacia sitios y aplicaciones externas. En el atributo href colocamos la url del enlace que queremos vincular. El atributo target con el valor _blank permite abrir el enlace en una nueva pestaña, esto es muy útil cuando tenemos enlaces hacia sitios externos y redes sociales -->
+
+    <a href="cursos.html">Ir a la página Cursos</a><br>
+    <a href="https://youtube.com/jonmircha" target="_blank">Canal de YouTube</a><br>
+    <a href="#top">Regresar al Temario</a><br>
+    <a href="mailto:jonmircha@gmail.com">jonmircha@gmail.com</a><br>
+
+    <h6>Encabezado 6 Imagenes</h6>
+
+    <!-- La etiqueta img nos permite incrustar imágenes en nuestro documento html. En el atributo src se define la ruta donde se encuentra la imagen. En el atributo alt se define un texto alternativo para la imagen, este texto no se visualiza, pero es importante agregarlo por temas de accesibilidad ( este texto lo leerán los screen readers de una persona con discapacidad visual). Formatos de imágenes aceptados en la web:
+      jpg / jpeg
+      png
+      gif
+      svg -->
+
+    <img src="img/hemisferios-cerebro.jpg" alt="Hemisferios del Cerebro" />
+    <img src="img/diseno-interaccion.png" alt="Diseño de Interacción" />
+    <img src="img/this-is-fine.gif" alt="This is Fine" />
+    <img src="img/html5.svg" alt="HTML5" />
+
+  </body>
+</html>
