@@ -32,17 +32,58 @@
   <body>
     <!-- En el cuerpo, irá todo el contenido textual y multimedia que queremos mostrar en el documento (todo lo que el usuario verá en el navegador).  -->
 
+    <!-- Que es HTML -->
     <div class="section">
-      <h1>Encabezado 1</h1>
-      <!-- Se utilizan para definir encabezados (títulos) de texto. El número indica la jerarquía, siendo h1 el título principal y h6 el de menor importancia.  Se recomienda que sólo exista un título principal por documento como una buena práctica de SEO (Search Engine Optimization).  -->
+      <h2>¿Que es HTML?</h2>
+
+      <ul>
+        <li>Hyper Text Markup Language o Lenguaje de Marcado de Hiper Texto</li>
+        <li>Es un lenguaje de marcado de etiquetas que define el contenido de la web</li>
+        <li>Una etiqueta es cada elemento del documento y las vamos a reconocer por que están entre picoparéntesis</li>
+        <li>Las etiquetas van a tener atributos, estos describen alguna característica de las etiqueta <br> atributo="valor" </li>
+      </ul>
+    </div>
+
+    <!-- Estructura basica del documento -->
+    <div class="section">
+      <h2>Estructura basica de un documento html</h2>
+
+      <code>
+        < !DOCTYPE html > <br>
+        < html lang="en" > <br>
+          < head > <br>
+            < meta charset="UTF-8" / > <br>
+            < meta name="viewport" content="width=device-width, initial-scale=1.0" / > <br>
+            < title>Document < /title > <br>
+          < /head > <br>
+          < body > <br>
+          < /body > <br>
+        < /html > <br>
+      </code>
+
+      <ul>
+        <li> !DOCTYPE html <br> Especifica el tipo de documento y define que está bajo el estándar de HTML5.</li>
+        <li> html lang="en" <br> La etiqueta html representa el nodo principal del documento <br> Tiene el atributo lang, que nos indica el idioma en el que el contenido del documento estará escrito </li>
+        <li> head <br> En la cabeza, vamos a tener etiquetas que establecen ciertas configuraciones al documento, como el idioma, el juego de carcactéres, el viewport, favicon, hojas de estilos, etc <br> Adicionalmente definimos la meta información del documento, estos meta datos les sirven a los algoritmos de internet para dar información del contenido del documento a los motores de búsqueda como el título y la meta descripción</li>
+        <li> body <br> En el cuerpo, irá todo el contenido textual y multimedia que queremos mostrar en el documento (todo lo que el usuario verá en el navegador)</li>
+        <li> meta charset="UTF-8" <br> El charset define el juego de caracteres que usará el documento, UTF-8 es la codificación universal para soportar caracteres ajenos al inglés</li>
+        <li>meta name="viewport" content="width=device-width,initial-scale=1.0" <br> La meta etiqueta viewport define como se visualizará el contenido en cualquier dispositivo, sea móvil, tableta, computadora de escritorio. Esta etiqueta es fundamental cuando hacemos diseño responsivo</li>
+        <li> title <br> La etiqueta title representa el título de nuestro documento, éste se ve en la pestaña del navegador, también es el texto que se ve en los resultados de motores de búsqueda, el título no debe exceder los 65 carácteres</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Encabezados</h2>
+
+      <p>Se utilizan para definir encabezados (títulos) de texto. El número indica la jerarquía, siendo h1 el título principal y h6 el de menor importancia.  Se recomienda que sólo exista un título principal por documento como una buena práctica de SEO (Search Engine Optimization).</p>
     </div>
 
     <div class="section">  
-      <h2>Encabezado 2 Etiquetas de texto</h2>
+      <h2>Etiquetas de texto</h2>
 
       <p>
         Esto es un parrafo.<br>
-        <b>Esto es un pedazo de texto en negrita.</b><br>
+        <b>Esto es texto en negrita.</b><br>
         <i>Texto en italicas.</i><br>
         <u>Esto es texto subrayado.</u><br>
         <mark>Texto remarcado.</mark><br>
@@ -58,84 +99,42 @@
     </div>
 
     <div class="section">
-      <h3>Encabezado 3 Listas ordenadas y no ordenadas</h3>
-      <!-- En HTML principalmente tenemos 2 tipos de listas:
-        Ordenadas ( ol - order list ): Los elementos están numerados.
-        Desordenadas ( ul- unorder list ): Los elementos están listados con viñetas.
-      Los elementos de ambas listas se llaman list items ( li ).
-      El atributo type permita cambiar la numeración o el estilo de la viñeta del list item.
-      El atributo reversed permite invertir el orden de los elementos de una lista ordenada.
-      El atributo start permite cambiar el valor inicial de los elementos de una lista ordenada.  -->
+      <h2>Listas ordenadas y no ordenadas</h2>
 
-      <ol>
-        <li>Primavera</li>
-        <li>Verano</li>
-        <li>Otoño</li>
-        <li>Invierno</li>
-      </ol>
-
-      <ol type="i">
-        <li>Primavera</li>
-        <li>Verano</li>
-        <li>Otoño</li>
-        <li>Invierno</li>
-      </ol>
-      
-      <ol reversed>
-        <li>Primavera</li>
-        <li>Verano</li>
-        <li>Otoño</li>
-        <li>Invierno</li>
-      </ol>
-      
-      <ol start="100">
-        <li>Primavera</li>
-        <li>Verano</li>
-        <li>Otoño</li>
-        <li>Invierno</li>
-      </ol>
-      
       <ul>
-        <li>Primavera</li>
-        <li>Verano</li>
-        <li>Otoño</li>
-        <li>Invierno</li>
+        Principalmente tenemos 2 tipos de listas:
+        <li>Ordenadas ( ol - order list ): Los elementos están numerados.</li>
+        <li>Desordenadas ( ul- unorder list ): Los elementos están listados con viñetas.</li>
       </ul>
-      
-      <ul type="circle">
-        <li>Primavera</li>
-        <li>Verano</li>
-        <li>Otoño</li>
-        <li>Invierno</li>
-      </ul>
-
-      <ul type="square">
-        <li>Primavera</li>
-        <li>Verano</li>
-        <li>Otoño</li>
-        <li>Invierno</li>
+      <hr>
+      <ul>
+        <li>Los elementos de ambas listas se llaman list items ( li ).</li>
+        <li>El atributo type permita cambiar la numeración o el estilo de la viñeta del list item.</li>
+        <li>El atributo reversed permite invertir el orden de los elementos de una lista ordenada.</li>
+        <li>El atributo start permite cambiar el valor inicial de los elementos de una lista ordenada.</li>
       </ul>
     </div>
 
     <div class="section">
     
-      <h4>Encabezado 4 Tablas</h4>
+      <h2>Tablas</h2>
 
-      <!-- Las tablas nos permiten tabular datos, las etiquetas para dibujar una tabla son:
-        table: Define la tabla en sí misma.
-        tr: Define la filas ( table row ) de la tabla.
-        td: Define las celdas ( table data ) dentro de las filas, lo que a su vez formará las
-        th: Define las celdas de cabecera ( table header ) dentro de la primer fila de la tabla, suele ser la fila de títulos de nuestra tabla. 
-      -->
+      <ul>
+        Las tablas nos permiten tabular datos, las etiquetas para dibujar una tabla son:
+        <li>table: Define la tabla en sí misma.</li>
+        <li>tr: Define la filas ( table row ) de la tabla.</li>
+        <li>td: Define las celdas ( table data ) dentro de las filas, lo que a su vez formará las th</li>
+        <li>th: Define las celdas de cabecera ( table header ) dentro de la primer fila de la tabla, suele ser la fila de títulos de nuestra tabla.</li>
+      </ul>
 
-      <table border="1">
+      <table>
         <tr>
           <th>Ciudad</th>
           <th>País</th>
           <th>Continente</th>
         </tr>
         <tr>
-          <th>Ciudad de México</th>
+          <td>Ciudad de México</td>
           <td>México</td>
           <td>América</td>
         </tr>
@@ -153,8 +152,11 @@
     </div>
 
     <div class="section">
-      <h5>Encabezado 5 Enlaces</h5>
-      <!-- Nos permiten enlazar documentos HTML entre sí, secciónes internas del propio documento o vincular hacia sitios y aplicaciones externas. En el atributo href colocamos la url del enlace que queremos vincular. El atributo target con el valor _blank permite abrir el enlace en una nueva pestaña, esto es muy útil cuando tenemos enlaces hacia sitios externos y redes sociales -->
+      <h2>Enlaces</h2>
+
+      <p>
+        Nos permiten enlazar documentos HTML entre sí, secciónes internas del propio documento o vincular hacia sitios y aplicaciones externas. En el atributo href colocamos la url del enlace que queremos vincular. El atributo target con el valor _blank permite abrir el enlace en una nueva pestaña, esto es muy útil cuando tenemos enlaces hacia sitios externos y redes sociales.
+      </p>
 
       <a href="cursos.html">Ir a la página Cursos</a><br>
       <a href="https://youtube.com/jonmircha" target="_blank">Canal de YouTube</a><br>
@@ -164,13 +166,19 @@
 
     <div class="section">
 
-      <h6>Encabezado 6 Imagenes</h6>
+      <h2>Imagenes</h2>
 
-      <!-- La etiqueta img nos permite incrustar imágenes en nuestro documento html. En el atributo src se define la ruta donde se encuentra la imagen. En el atributo alt se define un texto alternativo para la imagen, este texto no se visualiza, pero es importante agregarlo por temas de accesibilidad ( este texto lo leerán los screen readers de una persona con discapacidad visual). Formatos de imágenes aceptados en la web:
-        jpg / jpeg
-        png
-        gif
-        svg -->
+      <p>
+        La etiqueta img nos permite incrustar imágenes en nuestro documento html. En el atributo src se define la ruta donde se encuentra la imagen. En el atributo alt se define un texto alternativo para la imagen, este texto no se visualiza, pero es importante agregarlo por temas de accesibilidad ( este texto lo leerán los screen readers de una persona con discapacidad visual).
+      </p>
+
+      <ul>
+        Formatos de imágenes aceptados en la web:
+        <li>jpg/jpeg</li>
+        <li>png</li>
+        <li>gif</li>
+        <li>svg</li>
+      </ul>
 
       <img src="img/hemisferios-cerebro.jpg" alt="Hemisferios del Cerebro" />
       <img src="img/diseno-interaccion.png" alt="Diseño de Interacción" />
@@ -180,7 +188,10 @@
 
     <div class="section">
       <h2>Audio y Video</h2>
-      <!-- La etiqueta audio y video nos permite incrustar elementos multimedia en formato mp3 y mp4 en nuestro documento html. En el atributo src se define la ruta donde se encuentra el archivo multimedia. El atributo controls permite visualizar los controles de reproducción del elemento multimedia. El atributo preload permite que se precargue el elemento multimedia, cuando se cargue el documento html en el navegador. El atributo poster define una imagen previa que se visualizara antes de reproducir el video.  -->
+
+      <p>
+        La etiqueta audio y video nos permite incrustar elementos multimedia en formato mp3 y mp4 en nuestro documento html. En el atributo src se define la ruta donde se encuentra el archivo multimedia. El atributo controls permite visualizar los controles de reproducción del elemento multimedia. El atributo preload permite que se precargue el elemento multimedia, cuando se cargue el documento html en el navegador. El atributo poster define una imagen previa que se visualizara antes de reproducir el video.
+      </p>
 
       <audio src="/media/audio.mp3" controls preload></audio>
 
@@ -191,7 +202,9 @@
     
       <h2>IFRAME</h2>
       
-      <!-- Permite cargar contenido externo que se encuentre en otro sitio o plataforma, por ejemplo un video de YouTube, un mapa de Google, Documentos PDFs, etc.  -->
+      <p>
+        Permite cargar contenido externo que se encuentre en otro sitio o plataforma, por ejemplo un video de YouTube, un mapa de Google, Documentos PDFs, etc.
+      </p>
 
       <iframe src="/media/pdf.pdf" width="90%" height="700px"></iframe>
 
@@ -201,20 +214,24 @@
     <div class="section">
     
       <h2>Estructura general de pagina</h2>
-      <!-- Definen la estructura semántica de las partes que conforman la interfaz del documento html, es decir, proporcionan sentido y significado a cada una de las etiquetas con su contenido.  -->
 
-      <!-- Algunas de estas etiquetas son:
-        div: 
-        header: Representa la cabecera del sitio o de una sección.
-        nav: Representa una navegación.
-        main: Define la sección de contenido principal, se recomienda que sólo exista uno por documento.
-        aside: Representa una sección de contenido complementario o secundario.
-        article: Representa una sección autocontenida (que por sí sola se explica o se entiende).
-        section: Representa una sección de contenido genérico.
-        footer: Pié de página del sitio o de una sección. -->
+      <p>
+        Definen la estructura semántica de las partes que conforman la interfaz del documento html, es decir, proporcionan sentido y significado a cada una de las etiquetas con su contenido.
+      </p>
+
+      <ul>
+        Algunas de estas etiquetas son:
+        <li>div: Es una etiqueta contenedora de bloque que no tiene semántica.</li>
+        <li>header: Representa la cabecera del sitio o de una sección.
+        nav: Representa una navegación.</li>
+        <li>main: Define la sección de contenido principal, se recomienda que sólo exista uno por documento.</li>
+        <li>aside: Representa una sección de contenido complementario o secundario.</li>
+        <li>article: Representa una sección autocontenida (que por sí sola se explica o se entiende).</li>
+        <li>section: Representa una sección de contenido genérico.
+        footer: Pié de página del sitio o de una sección.</li>
+      </ul>
 
       <div>Esto es un div</div>
-      <!-- Es una etiqueta contenedora de bloque que no tiene semántica. -->
       <header>
         Esto es un header
       </header>
@@ -242,8 +259,17 @@
     
       <h2>Detalles</h2>
 
-      <!-- Un detalle es un bloque de contenido que puede alternar su visualización a manera de acordeón. La etiqueta details, es el contenedor del acordeón completo. La etiqueta summary, es el resumen que siempre se verá del acordeón. El contenido restante que este dentro del details, se mantendrá oculto hasta que el usuario de clic al summary. El atributo open hace que el contenido del detalle permanezca visible cuando el documento carga.  -->
-    
+      <p>
+        Un detalle es un bloque de contenido que puede alternar su visualización a manera de acordeón.
+      </p>
+
+      <ul>
+        <li>La etiqueta details, es el contenedor del acordeón completo.</li>
+        <li>La etiqueta summary, es el resumen que siempre se verá del acordeón.</li>
+        <li>El contenido restante que este dentro del details, se mantendrá oculto hasta que el usuario de clic al summary.</li>
+        <li>El atributo open hace que el contenido del detalle permanezca visible cuando el documento carga.</li>
+      </ul>
+
       <details>
         <summary>Resumen del Detalle</summary>
         <div>
@@ -258,6 +284,7 @@
           </p>
         </div>
       </details>
+
       <details open>
         <summary>Resumen del Detalle</summary>
         <div>
@@ -273,8 +300,5 @@
         </div>
       </details>
     </div>
-  
-
-
   </body>
 </html>

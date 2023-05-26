@@ -9,6 +9,37 @@ body {
   background-color: rgb(69, 59, 59);
 }
 
+h2 {
+  text-align: center;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+ol,
+ul {
+  margin: 0.5rem 0 0.5rem 1.5rem;
+}
+
+table * {
+  border: 1px solid red;
+  padding: 0.25rem;
+}
+
+img {
+  display: block;
+  max-width: 85%;
+  border: 2px solid orange;
+  margin: 1.25rem auto;
+}
+
+iframe {
+  display: block;
+  max-width: 60%;
+  margin: 5rem auto;
+}
+
 .section {
   width: 90%;
   margin: 5rem auto;
