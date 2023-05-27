@@ -1,39 +1,48 @@
 <!DOCTYPE html>
-<!-- Especifica el tipo de documento y define que está bajo el estándar de HTML5. -->
-
 <html lang="es">
-  <!-- La etiqueta html representa el nodo principal del documento. El atributo lang nos indica el idioma en el que el contenido del documento estará escrito.  -->
-
   <head>
-    <!-- En la cabeza, vamos a tener etiquetas que establecen ciertas configuraciones al documento, como el idioma, el juego de carcactéres, el viewport, favicon, hojas de estilos, etc. Adicionalmente definimos la meta información del documento, estos meta datos les sirven a los algoritmos de internet para dar información del contenido del documento a los motores de búsqueda como el título y la meta descripción.  -->
-
     <meta charset="UTF-8" />
-    <!-- El charset define el juego de caracteres que usará el documento, UTF-8 es la codificación universal para soportar caracteres ajenos al inglés.  -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- La meta etiqueta viewport define como se visualizará el contenido en cualquier dispositivo, sea móvil, tableta, computadora de escritorio. Esta etiqueta es fundamental cuando hacemos diseño responsivo.  -->
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- Trata a este documento para internet explorer igualarlo a la configuracion de edge. No sirve, ya que explorer esta practicamente muerto. Se puede obviar esta etiqueta. -->
 
     <title>HTML y CSS</title>
-    <!-- La etiqueta title representa el título de nuestro documento, éste se ve en la pestaña del navegador, también es el texto que se ve en los resultados de motores de búsqueda, el título no debe exceder los 65 carácteres.  -->
 
     <meta name="description" content="Descripción del documento." />
-    <!-- La meta etiqueta description, es una breve descripción del contenido que se encontrará en el documento, también aparece en los resultados de los motores de búsqueda, debajo del enlace del resultado, no debe exceder los 165 caracteres.  -->
 
     <link rel="icon" href="img/favicon.png" />
-    <!-- Un favicon es la imagen que se ve al lado del título de nuestro HTML en la pestaña del navegador, tiene que ser una imagen de dimensiones cuadradas y en formato .png  -->
 
     <link rel="stylesheet" href="css/style.css" />
-    <!-- Esta etiqueta link nos permite enlazar la hoja de estilos CSS al documento HTML.  -->
   </head>
 
   <body>
-    <!-- En el cuerpo, irá todo el contenido textual y multimedia que queremos mostrar en el documento (todo lo que el usuario verá en el navegador).  -->
+
+    <!-- Indice -->
+    <div class="section">
+      <nav class="menu">
+        <h3>HTML</h3>
+        <ul>
+          <li><a href="#html">Que es HTML?</a></li>
+          <li><a href="#documento-basico">Estructura basica</a></li>
+          <li><a href="#definiciones">Algunas definiciones basicas</a></li>
+          <li><a href="#h">Encabezados</a></li>
+          <li><a href="#texto">Etiquetas de texto</a></li>
+          <li><a href="#lista">Listas</a></li>
+          <li><a href="#tabla">Tablas</a></li>
+          <li><a href="#enlace">Enlaces</a></li>
+          <li><a href="#imagen">Imagenes</a></li>
+          <li><a href="#audio-video">Audio y video</a></li>
+          <li><a href="#iframe">Iframes</a></li>
+          <li><a href="#semantico">Estructuras semanticas</a></li>
+          <li><a href="#detalle">Detalles</a></li>
+          <li><a href="#form">Formularios</a></li>
+        </ul>
+      </nav>
+    </div>
 
     <!-- Que es HTML -->
-    <div class="section">
+    <div class="section" id="html">
       <h2>¿Que es HTML?</h2>
 
       <ul>
@@ -45,8 +54,8 @@
     </div>
 
     <!-- Estructura basica del documento -->
-    <div class="section">
-      <h2>Estructura basica de un documento html</h2>
+    <div class="section" id="documento-basico">
+      <h2>Estructura basica de un documento html 5</h2>
 
       <code>
         < !DOCTYPE html > <br>
@@ -60,25 +69,78 @@
           < /body > <br>
         < /html > <br>
       </code>
+    </div>
+
+    <!-- Algunas definiciones de etiquetas -->
+    <div class="section" id="definiciones">
+      <h2>Algunas etiquetas importantes</h2>
 
       <ul>
-        <li> !DOCTYPE html <br> Especifica el tipo de documento y define que está bajo el estándar de HTML5.</li>
-        <li> html lang="en" <br> La etiqueta html representa el nodo principal del documento <br> Tiene el atributo lang, que nos indica el idioma en el que el contenido del documento estará escrito </li>
-        <li> head <br> En la cabeza, vamos a tener etiquetas que establecen ciertas configuraciones al documento, como el idioma, el juego de carcactéres, el viewport, favicon, hojas de estilos, etc <br> Adicionalmente definimos la meta información del documento, estos meta datos les sirven a los algoritmos de internet para dar información del contenido del documento a los motores de búsqueda como el título y la meta descripción</li>
-        <li> body <br> En el cuerpo, irá todo el contenido textual y multimedia que queremos mostrar en el documento (todo lo que el usuario verá en el navegador)</li>
-        <li> meta charset="UTF-8" <br> El charset define el juego de caracteres que usará el documento, UTF-8 es la codificación universal para soportar caracteres ajenos al inglés</li>
-        <li>meta name="viewport" content="width=device-width,initial-scale=1.0" <br> La meta etiqueta viewport define como se visualizará el contenido en cualquier dispositivo, sea móvil, tableta, computadora de escritorio. Esta etiqueta es fundamental cuando hacemos diseño responsivo</li>
-        <li> title <br> La etiqueta title representa el título de nuestro documento, éste se ve en la pestaña del navegador, también es el texto que se ve en los resultados de motores de búsqueda, el título no debe exceder los 65 carácteres</li>
+        <li>
+          !DOCTYPE html <br>
+          Especifica el tipo de documento y define que está bajo el estándar de HTML5
+        </li>
+        <li> 
+          html lang="en" <br> 
+          La etiqueta html representa el nodo principal del documento <br> 
+          Tiene el atributo lang, que nos indica el idioma en el que el contenido del documento estará escrito 
+        </li>
+        <li> 
+          head <br> 
+          En la cabeza, vamos a tener etiquetas que establecen ciertas configuraciones al documento, como el idioma, el juego de carcactéres, el viewport, favicon, hojas de estilos, etc <br>
+          Adicionalmente definimos la meta información del documento, estos meta datos les sirven a los algoritmos de internet para dar información del contenido del documento a los motores de búsqueda como el título y la meta descripción
+        </li>
+        <li> 
+          body <br> 
+          En el cuerpo, irá todo el contenido textual y multimedia que queremos mostrar en el documento (todo lo que el usuario verá en el navegador)
+        </li>
+        <li> 
+          meta charset="UTF-8" <br> 
+          El charset define el juego de caracteres que usará el documento, UTF-8 es la codificación universal para soportar caracteres ajenos al inglés
+        </li>
+        <li>
+          meta name="viewport" content="width=device-width,initial-scale=1.0" <br> 
+          La meta etiqueta viewport define como se visualizará el contenido en cualquier dispositivo, sea móvil, tableta, computadora de escritorio. Esta etiqueta es fundamental cuando hacemos diseño responsivo
+        </li>
+        <li> 
+          title <br> 
+          La etiqueta title representa el título de nuestro documento, éste se ve en la pestaña del navegador, también es el texto que se ve en los resultados de motores de búsqueda, el título no debe exceder los 65 carácteres
+        </li>
+        <li>
+          meta http-equiv="X-UA-Compatible" content="IE=edge" <br>
+          Trata a este documento para internet explorer igualarlo a la configuracion de edge. No sirve, ya que explorer esta practicamente muerto. Se puede obviar esta etiqueta
+        </li>
+        <li>
+          meta name="description" content="Descripción del documento." <br>
+          La meta etiqueta description, es una breve descripción del contenido que se encontrará en el documento, también aparece en los resultados de los motores de búsqueda, debajo del enlace del resultado, no debe exceder los 165 caracteres
+        </li>
+        <li>
+          link rel="icon" href="img/favicon.png" <br>
+          Un favicon es la imagen que se ve al lado del título de nuestro HTML en la pestaña del navegador, tiene que ser una imagen de dimensiones cuadradas y en formato .png
+        </li>
+        <li>
+          link rel="stylesheet" href="css/style.css" <br>
+          Esta etiqueta link nos permite enlazar la hoja de estilos CSS al documento HTML
+        </li>
       </ul>
     </div>
 
-    <div class="section">
+    <!-- Encabezados -->
+    <div class="section" id="h">
       <h2>Encabezados</h2>
 
       <p>Se utilizan para definir encabezados (títulos) de texto. El número indica la jerarquía, siendo h1 el título principal y h6 el de menor importancia.  Se recomienda que sólo exista un título principal por documento como una buena práctica de SEO (Search Engine Optimization).</p>
+
+      <h1>Encabezado 1</h1>
+      <h2 style="text-align: initial;">Encabezado 2</h2>
+      <h3>Encabezado 3</h3>
+      <h4>Encabezado 4</h4>
+      <h5>Encabezado 5</h5>
+      <h6>Encabezado 6</h6>
     </div>
 
-    <div class="section">  
+    <!-- Etiquetas de texto -->
+    <div class="section" id="texto">  
       <h2>Etiquetas de texto</h2>
 
       <p>
@@ -98,7 +160,8 @@
       </p>
     </div>
 
-    <div class="section">
+    <!-- Listas -->
+    <div class="section" id="lista">
       <h2>Listas ordenadas y no ordenadas</h2>
 
       <ul>
@@ -115,8 +178,8 @@
       </ul>
     </div>
 
-    <div class="section">
-    
+    <!-- Tablas -->
+    <div class="section" id="tabla">
       <h2>Tablas</h2>
 
       <ul>
@@ -151,7 +214,8 @@
       </table>
     </div>
 
-    <div class="section">
+    <!-- Enlaces -->
+    <div class="section" id="enlace">
       <h2>Enlaces</h2>
 
       <p>
@@ -164,8 +228,8 @@
       <a href="mailto:jonmircha@gmail.com">jonmircha@gmail.com</a><br>
     </div>
 
-    <div class="section">
-
+    <!-- Imagenes -->
+    <div class="section" id="imagen">
       <h2>Imagenes</h2>
 
       <p>
@@ -186,7 +250,8 @@
       <img src="img/html5.svg" alt="HTML5" />
     </div>
 
-    <div class="section">
+    <!-- Audio y video -->
+    <div class="section" id="audio-video">
       <h2>Audio y Video</h2>
 
       <p>
@@ -198,8 +263,8 @@
       <video src="/media/video.mp4" controls preload></video>
     </div>
 
-    <div class="section">
-    
+    <!-- Iframe -->
+    <div class="section" id="iframe">   
       <h2>IFRAME</h2>
       
       <p>
@@ -211,8 +276,8 @@
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13136.590722976262!2d-58.565810549999995!3d-34.60042695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb993f3b3e69f%3A0xb31e2b15041d9f52!2sInstituto%20Cristo%20Rey!5e0!3m2!1ses-419!2sar!4v1684796398587!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     
-    <div class="section">
-    
+    <!-- Elementos semanticos de estructura -->
+    <div class="section" id="semantico">
       <h2>Estructura general de pagina</h2>
 
       <p>
@@ -255,8 +320,8 @@
       </footer>
     </div>
     
-    <div class="section">
-    
+    <!-- Detalles -->
+    <div class="section" id="detalle">
       <h2>Detalles</h2>
 
       <p>
@@ -299,6 +364,79 @@
           </p>
         </div>
       </details>
+    </div>
+
+    <!-- Formularios -->
+    <div class="section" id="form">
+      <h2>Formularios</h2>
+
+      <p>El elemento HTML form representa una sección de un documento que contiene controles interactivos que permiten a un usuario enviar información a un servidor web. Como por ejemplo los formularios para crear un usuario, ya sea google, facebook u otro sitio web.</p>
+
+      <ul>
+        Elementos de los formularios
+        <li>
+          Input <br>
+          Se usa para crear controles interactivos para formularios basados en la web con el fin de recibir datos del usuario <br>
+          Los inputs llevan el atributo name que es el nombre del control, el cual es enviado con los datos del formulario
+          <ul>
+            Hay disponible una amplia variedad de tipos de datos de entrada y widgets de control, que dependen del dispositivo y el agente de usuario (user agent)
+            <li>Text (valor por defecto)</li>
+            <li>Button</li>
+            <li>Checkbox</li>
+            <li>Color</li>
+            <li>Date</li>
+            <li>Datetime</li>
+            <li>Datetime-local</li>
+            <li>Email</li>
+            <li>File</li>
+            <li>Hidden</li>
+            <li>Image</li>
+            <li>Month</li>
+            <li>Number</li>
+            <li>Password</li>
+            <li>Radio</li>
+            <li>Range</li>
+            <li>Reset</li>
+            <li>Search</li>
+            <li>Submit</li>
+            <li>Tel</li>
+            <li>Time</li>
+            <li>Url</li>
+            <li>Week</li>
+          </ul>
+        </li>
+        <li>
+          Button <br>
+          Representa un elemento cliqueable de tipo botón que puede ser utilizado en formularios o en cualquier parte de la página que necesite un botón estándar y simple de aplicar
+        </li>
+        <li>
+          Textarea <br>
+          Caja de texto, usualmente usada para comentarios
+        </li>
+        <li>
+          Select <br>
+          Permite seleccionar entre varias opciones <br>
+          Llevan dentro la etiqueta option
+        </li>
+        <li>
+          Label <br>
+          Esta etiqueta sirve para dar un mensaje a lado del input u otra etiqueta del formulario
+        </li>
+      </ul>
+      
+      <form action="">
+        <legend>Muestra simple de formulario</legend>
+        <input type="text" name="" placeholder="Ingresa un nombre"> <br>
+        <input type="tel" placeholder="Ingresa un numero de telefono"> <br>
+        <textarea cols="30" rows="10" placeholder="Esto es un textarea"></textarea> <br>
+        <label>Esto es un select</label>
+        <select>
+          <option>Opcion 1</option>
+          <option>Opcion 2</option>
+          <option>Opcion 3</option>
+        </select> <br>
+        <input type="submit" value="Envialo nomas">
+      </form>
     </div>
   </body>
 </html>
