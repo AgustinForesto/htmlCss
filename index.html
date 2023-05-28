@@ -12,17 +12,27 @@
     <meta name="description" content="Descripción del documento." />
 
     <link rel="icon" href="img/favicon.png" />
-
+    
+    <link rel="apple-touch-icon" href="img/favicon.png">
+    
     <link rel="stylesheet" href="css/style.css" />
+
+    <meta name="theme-color" content="#ff6600">
+
+    <meta property="og:title" content="Mi apunte html y css">
+
+    <meta property="og:description" content="Descripcion del documento.">
+
+    <meta property="og:image" content="/img/favicon.png">
   </head>
 
   <body>
 
     <!-- Indice -->
-    <div class="section">
+    <div class="section" id="indice">
       <nav class="menu">
-        <h3>HTML</h3>
         <ul>
+          <h3>HTML</h3>
           <li><a href="#html">Que es HTML?</a></li>
           <li><a href="#documento-basico">Estructura basica</a></li>
           <li><a href="#definiciones">Algunas definiciones basicas</a></li>
@@ -37,6 +47,14 @@
           <li><a href="#semantico">Estructuras semanticas</a></li>
           <li><a href="#detalle">Detalles</a></li>
           <li><a href="#form">Formularios</a></li>
+          <li><a href="#data-atribute">Data-atributes</a></li>
+          <li><a href="#meta">Meta etiquetas</a></li>
+          <li><a href="#acces">Accesibilidad web</a></li>
+        </ul>
+
+        <ul>
+          <h3>Css</h3>
+          <li>ds</li>
         </ul>
       </nav>
     </div>
@@ -437,6 +455,96 @@
         </select> <br>
         <input type="submit" value="Envialo nomas">
       </form>
+    </div>
+
+    <!-- Data-atributes -->
+    <div class="section" id="data-atribute">
+      <h2>Data-atributes</h2>
+
+      <ul>
+        <li>Son atributos creados por el maquetador/diseñador/programador</li>
+        <li>Está diseñado de forma tal que sea fácil extender los datos asociados a un elemento en particular sin necesidad de que tengan un significado definido</li>
+        <li>La sintáxis es simple. Un atributo cualquiera cuyo nombre comience con data-es un atributo de datos</li>
+        <li>Sin tener que recurrir a artilugios tales como la utilización de atributos no estándar, propiedades adicionales en el DOM o Node.setUserData()</li>
+      </ul>
+      
+      <ul>
+        <h4>Uso desde javascript</h4>
+        <li>Se puede usar getAttribute() con su nombre HTML completo para leerlo</li>
+        <li>El estándar define una forma más simple: un DOMStringMap puede leer a través de una propiedad dataset</li>
+        <li>Cada propiedad es una cadena y se puede leer y escribir</li>
+      </ul>
+
+      <code id="id-prueba" data-prueba="siquesi">
+        let prueba = document.getElementById("id-prueba"); <br>
+        prueba.getAttribute("data-prueba"); // "siquesi" <br>
+        prueba.dataset.prueba; // "siquesi" <br>
+      </code>
+    </div>
+
+    <!-- Meta etiquetas -->
+    <div class="section" id="meta">
+      <h2>Meta etiquetas</h2>
+
+      <p>
+        Son etiquetas que van dentro de head <br>
+        Se utilizan para los optimizadores de busqueda SEO <br>
+      </p>
+
+      <ul>
+        <h4>Canonical</h4>
+        <li>< link rel="canonical" href="https://www.urlcanonica.com" ></li>
+        <li>Esta etiqueta se utiliza para resolver los problemas de SEO con contenido duplicado y que surgen cuando páginas web con diferentes URLs incluyen contenido idéntico o casi idéntico</li>
+        <li>A efectos de SEO, el enlace canónico muestra a Google y a otros buscadores qué URL corresponde a la fuente original del contenido y, por lo tanto, la que debe mostrar en los resultados de búsqueda</li>
+        <li>
+          Praguntar para saber si la url canonical es correcta <br>
+          ¿Es el contenido de ambas páginas (casi) idéntico? <br>
+          ¿Solamente hay un enlace canónico en cada página? <br>
+          ¿Existe realmente la página de destino? <br>
+          ¿Hay meta etiquetas “noindex” en la página de destino? <br>
+          ¿Es la página canónica la que debe aparecer en los resultados de búsqueda? <br>
+          ¿Se ha creado una página de resumen para las páginas paginadas? <br>
+          ¿El enlace se encuentra en la cabecera y no en el cuerpo del código HTML? <br>
+        </li>
+      </ul>
+
+      <ul>
+        <h4>Color de barra de direcciones en moviles</h4>
+        <li>< meta name="theme-color" content="#ff6600" ></li>
+      </ul>
+
+      <ul>
+        <h4>Icono de pestaña y de guardado de pagina (movile)</h4>
+        <li>< link rel="icon" href="img/favicon.png" / > <br></li>
+        <li>< link rel="apple-touch-icon" href="img/favicon.png" > <br></li>
+      </ul>
+
+      <ul>
+        <h4>Open Graph</h4>
+        <li>Es un protocolo para compartir contenido de manera enriquecida en redes sociales</li>
+        <li>Esto hace que cuando se comparta la url por redes sociales automaticamente cargue la informacion configurada</li>
+        <li>
+          Las etiquetas basicas son meta etiquetas que tienen el atributo property con valores pre-establecidos como <br>
+          og:title
+          og:image
+        </li>
+        <li>Ejempo < meta property="og:title" content="Titulo a mostrar" ></li>
+        <li>El protocolo Open Graph es mas amplio y merece una seccion aparte</li>
+      </ul>
+    </div>
+
+    <!-- Accesibilidad web -->
+    <div class="section" id="acces">
+      <h2 role="doc-subtitle" aria-label="Es un subtitulo que dice accesibilidad web" tabindex="1">Accesibilidad web</h2>
+
+      <ul>
+        <li>Son mecanismos para ayudar a visualizar la informacion a personas que no pueden percibir el documento con la mejor efectividad</li>
+        <li>Es un tema para profundizar mucho mas</li>
+        <li>Atributo de accesibilidad "role" para dar informacion adicional del contenido y la etiqueta</li>
+        <li>Atributo "aria-label" para dar mas informacion mas descriptiba sobre el contenido de la etiqueta</li>
+        <li>Atributo "tabindex" para darle foco mediante tab, se define un orden numerico positivo o negativo</li>
+        <li>Hay mas atributos de accesibilidad y mas informacion en la que detallar y aprender</li>
+      </ul>
     </div>
   </body>
 </html>
