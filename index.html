@@ -546,5 +546,166 @@
         <li>Hay mas atributos de accesibilidad y mas informacion en la que detallar y aprender</li>
       </ul>
     </div>
+
+    <hr> <hr> <hr>
+
+    <!-- CSS -->
+    <!-- Que es css -->
+    <div class="section" id="css">
+      <h2>¿Que es CSS?</h2>
+
+      <ul>
+        <li>Cascading Style Sheet u Hojas de estilos en cascada</li>
+        <li>Es un lenguaje de definicion de hojas de estilos que proveen diseño y presentacion al documento html</li>
+        <li>Permite aplicar estilos de manera selectiva a elementos en documentos html</li>
+        <li>Ejemplo de codigo css: <br>
+          <code>
+            selector { <br>
+              propiedad-a: valor-1; <br>
+              propiedad-b: valor-2; <br>
+            } <br>
+            otro-selector { <br>
+              propiedad-a: valor-3; <br>
+              propiedad-x: valor-0; <br>
+            } <br>
+          </code>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Selectores css -->
+    <div class="section" id="selector-css">
+      <h2>Selectores CSS</h2>
+
+      <ul>
+        <li>
+          Etiqueta <br>
+          Cualquier etiqueta html <br>
+          <code>
+            body { <br>
+              background-color: black; <br>
+            } <br>
+            h1 { <br>
+              text-align: center; <br>
+            } <br>
+          </code>
+        </li>
+        <li>
+          Identidad <br>
+          Segun el id de la etiqueta html <br>
+          <code>
+            #nombre-id { <br>
+              color: red; <br>
+            } <br>
+          </code>
+        </li>
+        <li>
+          Clase <br>
+          Segun la clase de la etiqueta html <br>
+          <code>
+            .nombre-clase { <br> 
+              display: block; <br>
+            } <br>
+          </code>
+        </li>
+        <li data-estilo-li="aver">
+          De atributo <br>
+          Lo elementos en una pagina con el atributo especificado <br>
+          <code>
+            li[data-estilo-li="aver"] { <br>
+              background-color: blue; <br>
+            } <br>
+          </code>
+        </li>
+        <li>
+          Universal <br>
+          Aplica a todas las etiquetas <br>
+          <code>
+            * { <br> 
+              margin: auto; <br>
+            } <br>
+          </code>
+        </li>
+        <li>
+          Pseudo clases <br>
+          Son estados especiales de las etiquetas <br>
+          <code>
+            a:hover { /* Este estilo aplica cuando el puntero del mouse esta sobre una etiqueta a (de link) */<br>
+              background-color: blue; <br>
+            } <br>
+          </code>
+        </li>
+        <li>
+          Selector descendiente <br>
+          El espacio en blanco es el selector de hijos descendientes <br>
+          <code>
+            div .section { /* Este estilo aplica a todas las etiquetas con clase "section" hijas de un div */ <br>
+              display: flex; <br>
+            } <br>
+          </code>
+        </li>
+        <li>
+          Para aplicar el mismo bloque de declaracion de propiedades a varios etiquetas html se utiliza la "," <br>
+          <code>
+            div, class-name, id-name { <br> 
+              display: flex; <br>
+              justify-content: space-around; <br>
+              align-items: center; <br>
+              border: 1px solid black; <br>
+            } <br>
+          </code>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Variables -->
+    <div class="section" id="var-css">
+      <h2>Variables CSS</h2>
+
+      <ul>
+        <li>Si se quiere tener la variable disponible para todo el documento hay que definirla dentro del selectro :root (raiz)</li>
+        <li>Empieza por dos guiones medias --</li>
+        <li>Para usar una variable se hace uso de la funcion var()</li>
+        <li>
+          <code>
+            :root { <br>
+              --color-primero: rgb(40, 167, 226); <br>
+              --color-segundo: black; <br>
+            } <br>
+            html { <br>
+              background-color: var(--color-primero); <br>
+            } <br>
+          </code>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Orden de los estilos css -->
+    <div class="section" id="orden-css">
+      <h2>Ordenamiento del codigo CSS</h2>
+
+      <ol>
+        <h4>Es importante mantener un orden en nuestro codigo css para que se aplique de forma correcta</h4>
+        <li>Definicion de variables</li>
+        <li>Estilos de etiquetas html</li>
+        <li>Estilos de secciones o componentes de la interfaz de usuario</li>
+        <li>Estilos de clases utilitarias</li>
+      </ol>
+    </div>
+
+    <!-- Modelo de caja -->
+    <div class="section" id="caja-css">
+      <h2>Modelo de caja</h2>
+
+      <p>
+        No es de extrañar que el diseño de CSS esté basado principalmente en el modelo de caja. Cada una de las cajas que ocupa espacio en tu página tiene propiedades como estas:
+        padding (relleno), el espacio alrededor del contenido. En el ejemplo siguiente, es el espacio alrededor del texto del párrafo.
+        border (marco), la línea que se encuentra fuera del relleno.
+        margin (margen), el espacio fuera del elemento que lo separa de los demás
+        box-sizing ()
+        width (ancho), el ancho de la caja (lo cual se define mediante box-sizing)
+        Puedes pensar en la mayoría de los elementos HTML de tu página como cajas apiladas una sobre la otra
+      </p>
+    </div>
   </body>
 </html>
