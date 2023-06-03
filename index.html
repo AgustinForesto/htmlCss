@@ -697,15 +697,198 @@
     <div class="section" id="caja-css">
       <h2>Modelo de caja</h2>
 
+      <p>Puedes pensar en la mayoría de los elementos HTML de tu página como cajas apiladas una sobre la otra</p>
+
+      <hr>
+
+      <ul>
+        <h4>Cada una de las cajas que ocupa espacio en tu página tiene propiedades como estas:</h4>
+        <li>
+          Padding (relleno) <br>
+          El espacio que hay alrededor del contenido <br>
+        </li>
+        <li>
+          Border (marco/borde) <br>
+          La linea que se encuentra fuera del padding <br>
+        </li>
+        <li>
+          Margin (margen) <br>
+          Es el espacio fuera del borde del elemento que lo separa de los demas elementos <br>
+        </li>
+        <li>
+          Box-sizing (tamaño de caja) <br>
+          Debe calcular el ancho y alto total de un elemento <br>
+          <ul>
+            <h4>Esta propiedad tiene dos posibles valores</h4>
+            <li>
+              Content-box <br>
+              Es el comportamiento CSS por defecto para el tamaño de la caja <br>
+              Se toma como tamaño de caja solo al contenido del elemento <br>
+            </li>
+            <li>
+              Border-box <br>
+              Se toma como tamaño de caja -content + padding + border- <br>
+            </li>
+          </ul>
+        </li>
+        <li>
+          Width (ancho) <br>
+          El ancho de la caja <br>
+        </li>
+        <li>
+          Height (alto) <br>
+          El alto de la caja <br>
+        </li>
+      </ul>
+
+      <hr>
+
+      <ul>
+        <h4>Si una caja se define como un bloque, se comportará de las maneras siguientes:</h4>
+        <li>La caja fuerza un salto de línea al llegar al final de la línea</li>
+        <li>La caja se extenderá en la dirección de la línea para llenar todo el espacio disponible que haya en su contenedor</li>
+        <li>Se respetan las propiedades width y height</li>
+        <li>El relleno, el margen y el borde mantienen a los otros elementos alejados de la caja</li>
+      </ul>
+
+      <hr>
+
+      <ul>
+        <h4>Si una caja tiene una visualización externa de tipo inline, entonces:</h4>
+        <li>La caja no fuerza ningún salto de línea al llegar al final de la línea</li>
+        <li>Las propiedades width y height no se aplican</li>
+        <li>Se aplican relleno, margen y bordes verticales, pero no mantienen alejadas otras cajas en línea</li>
+        <li>Se aplican relleno, margen y bordes horizontales, y mantienen alejadas otras cajas en línea</li>
+      </ul>
+    </div>
+
+    <!-- Fondos en css -->
+    <div class="section" id="fondo-css">
+      <h2>Aplicar estilo a los fondos en CSS</h2>
+
+      <ul>
+        <li>
+          <p>Background-color</p>
+          <p>Define el color de fondo de cualquier elemento en CSS</p>
+          <p>La propiedad admite cualquier color válido</p>
+          <p>Un color de fondo se extiende por debajo del contenido y el relleno del elemento</p>
+        </li>
+        <li>
+          <p>Background-image</p>
+          <p>Permite visualizar una imagen de fondo en un elemento</p>
+          <p>La imagen que sea mas grande que el elemento no se reduce para ajustarse a la caja, por lo que solo vamos a ver una pequeña esquina de esta</p>
+          <p>La imagen mas pequeña que el elemento aparece en forma de mosaico hasta llenar la caja</p>
+          <p>Si especificas un color de fondo además de una imagen de fondo, la imagen se muestra encima del color de fondo</p>
+          <p>Un degradado, cuando se usa para un fondo, actúa como una imagen y también se establece usando esta propiedad</p>
+          <p>También es posible poner múltiples imágenes de fondo especificando múltiples valores para un solo atributo, separados cada uno por una coma</p>
+        </li>
+        <li>
+          <p>Background-repeat</p>
+          <p>Se usa para controlar el comportamiento de tipo mosaico de las imágenes</p>
+          <ul>
+            <li>no-repeat: evita que el fondo se repita</li>
+            <li>repeat-x: repite horizontalmente</li>
+            <li>repeat-y: repite verticalmente</li>
+            <li>repeat: es el valor por defecto; repite en ambas direcciones</li>
+          </ul>
+        </li>
+        <li>
+          <p>Background-size</p>
+          <p>Para ajustar el tamaño de la imagen para que quepa dentro del fondo</p>
+          <p>Puede tomar valores de longitud o porcentaje</p>
+          <ul>
+            <h4>También puedes utilizar palabras clave:</h4>
+            <li>
+              <p>Cover</p>
+              <p>El navegador agrandará la imagen lo suficientemente grande como para que esta cubra por completo el área de la caja sin que pierda su relación de aspecto</p>
+              <p>En este caso, es probable que parte de la imagen quede fuera de la caja</p>
+            </li>
+            <li>
+              <p>Contain</p>
+              <p>El navegador adecuará el tamaño de la imagen para que quepa dentro de la caja</p>
+              <p>Pueden quedar huecos a ambos lados o en la parte superior e inferior de la imagen si la relación de aspecto de la imagen es diferente de la de la caja</p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p>Background-position</p>
+          <p>Permite elegir la posición en la que aparece la imagen de fondo dentro de la caja a la que está asociada</p>
+          <p>Para ello se utiliza un sistema de coordenadas en el que la esquina superior izquierda de la caja es (0,0), y la caja se coloca sobre los ejes horizontal (x) y vertical (y)</p>
+          <p>El valor predeterminado de background-position es (0,0)</p>
+          <p>Los valores más comunes toman dos valores independientes: un valor horizontal seguido de un valor vertical</p>
+          <p>También se puede usar una sintaxis de 4 valores para indicar una distancia desde ciertos bordes del cuadro</p>
+        </li>
+        <li>
+          <p>Las otras propiedades background-* también pueden tener valores múltiples separados por comas, de la misma manera que background-image</p>
+        </li>
+        <li>
+          <p>Background-attachment</p>
+          <p>Especifica cómo se desplazan los fondos cuando se desplaza el contenido</p>
+          <ul>
+            <h4>Puede tomar los valores siguientes:</h4>
+            <li>
+              <p>Scroll</p>
+              <p>Hace que el fondo del elemento se desplace cuando te desplazas por el contenido de la página</p>
+              <p>Si te desplazas por el contenido del elemento, el fondo no se mueve</p>
+              <p>El efecto resultante es que el fondo está anclado a la página en una posición fija, por lo que se desplaza a medida que la página se desplaza</p>
+            </li>
+            <li>
+              <p>Fixed</p>
+              <p>Hace que el fondo de un elemento quede fijo con respecto a la ventana gráfica, de modo que no se desplace cuando te desplazas por la página o el contenido del elemento</p>
+              <p>Siempre permanece en la misma posición de la pantalla</p>
+            </li>
+            <li>
+              <p>Local</p>
+              <p>Este valor se añadió posteriormente (solo es compatible con Internet Explorer 9+, mientras que los otros son compatibles con IE4+) porque el valor scroll es bastante confuso y en muchos casos no hace lo que deseas</p>
+              <p>El valor local ancla el fondo al elemento en el que está configurado, de modo que cuando te desplazas por el contenido del elemento, el fondo se desplaza con este</p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Modos de escritura -->
+    <div class="section" id="escritura-css">
+      <h2>Modos de escritura</h2>
+
       <p>
-        No es de extrañar que el diseño de CSS esté basado principalmente en el modelo de caja. Cada una de las cajas que ocupa espacio en tu página tiene propiedades como estas:
-        padding (relleno), el espacio alrededor del contenido. En el ejemplo siguiente, es el espacio alrededor del texto del párrafo.
-        border (marco), la línea que se encuentra fuera del relleno.
-        margin (margen), el espacio fuera del elemento que lo separa de los demás
-        box-sizing ()
-        width (ancho), el ancho de la caja (lo cual se define mediante box-sizing)
-        Puedes pensar en la mayoría de los elementos HTML de tu página como cajas apiladas una sobre la otra
+        Un modo de escritura en CSS se refiere a si el texto está escrito horizontal o verticalmente. La propiedad writing-mode permite cambiar de un modo a otro. No necesitas estar trabajando en un lenguaje que use un modo de escritura vertical para querer hacer esto - Podrías cambiar el modo de escritura de partes de tu diseño por razones creativas.
+        Los tres valores posibles para la propiedad writing-mode son:
+
+    horizontal-tb: Dirección de flujo de bloque de arriba abajo. Las frases aparecen horizontales.
+    vertical-rl: Dirección de flujo de bloque de derecha a izquierda. Las frases aparecen verticales.
+    vertical-lr: Dirección de flujo de bloque de izquierda a derecha. Las frases aparecen verticales.
+
+    Así, la propiedad writing-mode está configurando en realidad la direccion en que los elementos de nivel bloque son desplegados en la página - ya sea de arriba abajo, derecha a izquierda, o de izquierda a derecha. Luego señala la dirección del flujo de texto en las frases.
       </p>
     </div>
+
+    <!-- Algoritmo de CSS -->
+    <div class="section" id="algoritmo-css">
+      <h2>El algoritmo de CSS</h2>
+
+      <p>Es la forma en que el navegador aplica estilos al documento HTML. Es vital entender este concepto para que entiendas como se aplican y en algunas ocasiones se sobreescriben las reglas CSS</p>
+      <h4>Cascada</h4>
+      <h4>Especificidad</h4>
+      <h4>Herencia</h4>
+      <p>
+        La cascada es el mecanismo en que el navegador aplica los estilos.
+          .Origen del codigo
+          -El user agent (los estilos por defecto del navegador)
+          -Personalizaciones del usuario
+          -Los estilos del autor
+          .La especificidad del selector
+          .Orden de aparicion
+      </p>
+     <p> La Especificidad es el peso que tiene un selector cuando hay conflicto de estilos. Se calcula de la siguiente forma:
+  Etiquetas y pseudoelementos -------------- 0,0,0,1
+  Clases, atributos y pseudoclases ------------0,0,1,0
+  Identificadores -------------------------------0,1,0,0
+  Estilos en línea--------------------------------1,0,0,0
+  !important ------------------Rompe la especificidad
+
+La Herencia, es la capacidad de un selector de obtener (heredar) los valores de sus ancestros más cercanos, para aplicarla se usa el valor inherit, si queremos evitarla podemos asignar otro valor o inicializar la propiedad en cuestión con el valor initial
+</p>    
+</div>
   </body>
 </html>
