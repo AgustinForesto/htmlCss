@@ -854,12 +854,10 @@
       <p>
         Un modo de escritura en CSS se refiere a si el texto está escrito horizontal o verticalmente. La propiedad writing-mode permite cambiar de un modo a otro. No necesitas estar trabajando en un lenguaje que use un modo de escritura vertical para querer hacer esto - Podrías cambiar el modo de escritura de partes de tu diseño por razones creativas.
         Los tres valores posibles para la propiedad writing-mode son:
-
-    horizontal-tb: Dirección de flujo de bloque de arriba abajo. Las frases aparecen horizontales.
-    vertical-rl: Dirección de flujo de bloque de derecha a izquierda. Las frases aparecen verticales.
-    vertical-lr: Dirección de flujo de bloque de izquierda a derecha. Las frases aparecen verticales.
-
-    Así, la propiedad writing-mode está configurando en realidad la direccion en que los elementos de nivel bloque son desplegados en la página - ya sea de arriba abajo, derecha a izquierda, o de izquierda a derecha. Luego señala la dirección del flujo de texto en las frases.
+        horizontal-tb: Dirección de flujo de bloque de arriba abajo. Las frases aparecen horizontales.
+        vertical-rl: Dirección de flujo de bloque de derecha a izquierda. Las frases aparecen verticales.
+        vertical-lr: Dirección de flujo de bloque de izquierda a derecha. Las frases aparecen verticales.
+        Así, la propiedad writing-mode está configurando en realidad la direccion en que los elementos de nivel bloque son desplegados en la página - ya sea de arriba abajo, derecha a izquierda, o de izquierda a derecha. Luego señala la dirección del flujo de texto en las frases.
       </p>
     </div>
 
@@ -867,28 +865,137 @@
     <div class="section" id="algoritmo-css">
       <h2>El algoritmo de CSS</h2>
 
-      <p>Es la forma en que el navegador aplica estilos al documento HTML. Es vital entender este concepto para que entiendas como se aplican y en algunas ocasiones se sobreescriben las reglas CSS</p>
-      <h4>Cascada</h4>
-      <h4>Especificidad</h4>
-      <h4>Herencia</h4>
       <p>
-        La cascada es el mecanismo en que el navegador aplica los estilos.
-          .Origen del codigo
-          -El user agent (los estilos por defecto del navegador)
-          -Personalizaciones del usuario
-          -Los estilos del autor
-          .La especificidad del selector
-          .Orden de aparicion
+        Es la forma en que el navegador aplica estilos al documento HTML. Es vital entender este concepto para que entiendas como se aplican y en algunas ocasiones se sobreescriben las reglas CSS
       </p>
-     <p> La Especificidad es el peso que tiene un selector cuando hay conflicto de estilos. Se calcula de la siguiente forma:
-  Etiquetas y pseudoelementos -------------- 0,0,0,1
-  Clases, atributos y pseudoclases ------------0,0,1,0
-  Identificadores -------------------------------0,1,0,0
-  Estilos en línea--------------------------------1,0,0,0
-  !important ------------------Rompe la especificidad
 
-La Herencia, es la capacidad de un selector de obtener (heredar) los valores de sus ancestros más cercanos, para aplicarla se usa el valor inherit, si queremos evitarla podemos asignar otro valor o inicializar la propiedad en cuestión con el valor initial
-</p>    
-</div>
+      <ul>
+        <h4>Cascada</h4>
+        Es el mecanismo en que el navegador aplica los estilos
+        <li>Origen del codigo</li>
+        <li>El user agent (los estilos por defecto del navegador)</li>
+        <li>Personalizaciones del usuario</li>
+        <li>Los estilos del autor</li>
+        <li>La especificidad del selector</li>
+        <li>Orden de aparicion</li>
+        <br>
+        <h4>Especificidad</h4>
+        Es el peso que tiene un selector cuando hay conflicto de estilos. Se calcula de la siguiente forma:
+        <li>Etiquetas y pseudoelementos -------------- 0,0,0,1</li>
+        <li>Clases, atributos y pseudoclases ------------0,0,1,0</li>
+        <li>Identificadores -------------------------------0,1,0,0</li>
+        <li>Estilos en línea--------------------------------1,0,0,0</li>
+        <li>!important ------------------Rompe la especificidad</li>
+        <br>
+        <h4>Herencia</h4>
+        Es la capacidad de un selector de obtener (heredar) los valores de sus ancestros más cercanos, para aplicarla se usa el valor inherit, si queremos evitarla podemos asignar otro valor o inicializar la propiedad en cuestión con el valor initial
+      </ul>
+    </div>
+
+    <!-- Unidades de medida -->
+    <div class="section" id="unidad-medida-css">
+      <h2>Unidades de medida en CSS</h2>
+
+      <ul>
+        <h4>Unidades absolutas</h4>
+        <p>
+          Su valor no cambia, son medidas del mundo real <br>
+          La mayoría de estos valores son más útiles cuando se usan en una salida en formato impreso que en la salida de pantalla
+        </p>
+
+        <table>
+          <tr>
+            <th>Unidad</th>
+            <th>Nombre</th>
+            <th>Equivale a</th>
+          </tr>
+          <tr>
+            <td>cm</td>
+            <td>Centimetros</td>
+            <td>1cm = 96/2,54px</td>
+          </tr>
+          <tr>
+            <td>mm</td>
+            <td>Milimetros</td>
+            <td>1mm = 1/10cm</td>
+          </tr>
+          <tr>
+            <td>Q</td>
+            <td>Cuartos de milimetro</td>
+            <td>1Q = 1/40cm</td>
+          </tr>
+          <tr>
+            <td>in</td>
+            <td>Pulgadas</td>
+            <td>1in = 2,54cm</td>
+          </tr>
+          <tr>
+            <td>pc</td>
+            <td>Picas</td>
+            <td>1pc = 1/6in</td>
+          </tr>
+          <tr>
+            <td>pt</td>
+            <td>Puntos</td>
+            <td>1pt = 1/72in</td>
+          </tr>
+          <tr>
+            <td>px</td>
+            <td>Pixeles</td>
+            <td>1px = 1/96in</td>
+          </tr>
+        </table>
+        <br>
+
+        <h4>Unidades relativas</h4>
+        <p>
+          Su valor es relativo a algo más, por ejemplo, al tamaño de letra del elemento principal o al tamaño de la ventana gráfica <br>
+          La ventaja de usar unidades relativas es que con una planificación cuidadosa puedes lograr que el tamaño del texto u otros elementos escalen en relación con todo lo demás en la página
+        </p>
+
+        <table>
+          <tr>
+            <th>Unidad</th>
+            <th>Relativa a</th>
+          </tr>
+          <tr>
+            <td>em</td>
+            <td>Tamaño de letra del elemento padre, en el caso de propiedades tipográficas como font-size, y tamaño de la fuente del propio elemento en el caso de otras propiedades, como width</td>
+          </tr>
+          <tr>
+            <td>ex</td>
+            <td>Altura x de la fuente del elemento</td>
+          </tr>
+          <tr>
+            <td>ch</td>
+            <td>La medida de avance (ancho) del glifo "0" de la letra del elemento</td>
+          </tr>
+          <tr>
+            <td>rem</td>
+            <td>Tamaño de la letra del elemento raíz</td>
+          </tr>
+          <tr>
+            <td>lh</td>
+            <td>Altura de la línea del elemento</td>
+          </tr>
+          <tr>
+            <td>vw</td>
+            <td>Ancho de la ventana gráfica</td>
+          </tr>
+          <tr>
+            <td>vh</td>
+            <td>Altura de la ventana gráfica</td>
+          </tr>
+          <tr>
+            <td>vmin</td>
+            <td>Dimensión más pequeña de la ventana gráfica</td>
+          </tr>
+          <tr>
+            <td>vmax</td>
+            <td>Dimensión más grande de la ventana gráfica</td>
+          </tr>
+        </table>
+      </ul>
+    </div>
   </body>
 </html>
